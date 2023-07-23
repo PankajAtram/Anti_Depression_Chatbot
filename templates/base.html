@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chatbot</title>
+</head>
+
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="Chatbot" class="w3-bar-item w3-button">Anti-Depression Chatbot</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="About" class="w3-bar-item w3-button">About</a>
+        <a href="features" class="w3-bar-item w3-button">Features</a>
+        <a href="Contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img img src="{{ url_for('static', filename='images/R.jpg') }}" width="1440" height="800">
+
+    <div class="row">
+      <div class="col sm-4">
+        <div class="container1">
+          <h7 class="bottom-left1">Click this chat icon to start chatting</h7>
+          
+        </div>
+      </div>
+      <div class="col sm-4">
+        <p class="top-left">Check out these</p>
+        <div class="links">
+          <div class="bottom-right1">
+            <a href="https://www.silvergames.com/en/t/stress-relief" role="button" target="_blank">Games</a>
+            <a href="https://www.healthline.com/nutrition/16-ways-relieve-stress-anxiety#3.-Minimize-phone-use-and-screen-time" role="button" target="_blank">Read Article</a>
+          </div>
+          <!-- <div class="bottom-right1">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+              <button type="button" class="btn btn-primary">Button</button>
+              <button type="button" class="btn btn-primary">Button</button>
+            </div>
+          </div> -->
+        </div>
+        <div class="top-left1">
+          <p style="font-style: italic;" class="top-right">“Depression, suffering and anger are all part of being human.” </p>
+        </div>
+        <div class="top-left2">
+          <p style="right: 10px;">- Janet Fitch</p>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Page content -->
+
+    <div class="container">
+      <div class="chatbox">
+        <div class="chatbox__support">
+          <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Chat support</h4>
+              <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+            </div>
+          </div>
+          <div class="chatbox__messages">
+            <div></div>
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message...">
+            <button class="chatbox__send--footer send__button">Send</button>
+          </div>
+        </div>
+        <div class="chatbox__button">
+          <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+      $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+
+</html>
